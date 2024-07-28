@@ -1,16 +1,16 @@
 import{
-  BroswerRouter,
+  BrowserRouter,
   Routes,
   Route,
 } from "react-router-dom";
 import Home from "./pages/home/Home";
 import List from "./pages/list/List";
 import Hotel from "./pages/hotel/Hotel";
-import Login from ".pages/login/Login";
+import Login from "./pages/login/Login";
 
 function App() {
   return (
-    <BroswerRouter>
+    <BrowserRouter>
     <Routes>
       <Route path="/" element={<Home/>}/>
       <Route path="/hotels" element={<List/>}/>
@@ -18,7 +18,7 @@ function App() {
       <Route path="/login" element={<Login/>}/>
     
     </Routes>
-    </BroswerRouter>
+    </BrowserRouter>
   );
 }
 

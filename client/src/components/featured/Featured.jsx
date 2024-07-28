@@ -3,7 +3,7 @@ import "./featured.css";
 
 const Featured = () => {
   const { data, loading, error } = useFetch(
-    "/hotels/countByCity?cities=berlin,madrid,london"
+    "http://localhost:8800/api/hotels/countByCity?cities=Mumbai,Kolkata,Delhi"
   );
 
   return (
@@ -14,35 +14,35 @@ const Featured = () => {
         <>
           <div className="featuredItem">
             <img
-              src="https://cf.bstatic.com/xdata/images/city/max500/957801.webp?k=a969e39bcd40cdcc21786ba92826063e3cb09bf307bcfeac2aa392b838e9b7a5&o="
+              src="https://cf.bstatic.com/xdata/images/city/600x600/971346.jpg?k=40eeb583a755f2835f4dcb6900cdeba2a46dc9d50e64f2aa04206f5f6fce5671&amp;o="
               alt=""
               className="featuredImg"
             />
             <div className="featuredTitles">
-              <h1>Berlin</h1>
+              <h1>Mumbai</h1>
               <h2>{data[0]} properties</h2>
             </div>
           </div>
 
           <div className="featuredItem">
             <img
-              src="https://cf.bstatic.com/xdata/images/city/max500/690334.webp?k=b99df435f06a15a1568ddd5f55d239507c0156985577681ab91274f917af6dbb&o="
+              src="https://cf.bstatic.com/xdata/images/city/square250/684571.webp?k=2166dfd3192f12497a35d57434f14f2f9175eca9e2698b04eeb827064c3c9d4d&amp;o="
               alt=""
               className="featuredImg"
             />
             <div className="featuredTitles">
-              <h1>Madrid</h1>
+              <h1>Kolkata</h1>
               <h2>{data[1]} properties</h2>
             </div>
           </div>
           <div className="featuredItem">
             <img
-              src="https://cf.bstatic.com/xdata/images/city/max500/689422.webp?k=2595c93e7e067b9ba95f90713f80ba6e5fa88a66e6e55600bd27a5128808fdf2&o="
+              src="https://cf.bstatic.com/xdata/images/city/square250/684765.webp?k=3f7d20034c13ac7686520ac1ccf1621337a1e59860abfd9cbd96f8d66b4fc138&o="
               alt=""
               className="featuredImg"
             />
             <div className="featuredTitles">
-              <h1>London</h1>
+              <h1>Delhi</h1>
               <h2>{data[2]} properties</h2>
             </div>
           </div>
